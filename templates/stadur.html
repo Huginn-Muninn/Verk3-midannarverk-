@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block innihald %}
+    <h1>{{ft}} - {{name}}</h1>
+    {% for item in data['results'] %}
+        {% if item['company'] == ft %}
+            {% if item['name'] == name %}
+                <h3>Bensín 95: {{item['bensin95']}}</h3>
+                <h3>Diesel: {{item['diesel']}}</h3>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endblock %}

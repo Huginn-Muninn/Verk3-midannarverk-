@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block innihald %}
+    {% for item in company %}
+        {% if item == "Atlantsolía" %}
+            <a href="/til/{{item}}" class="mynd">
+            <img src="{{ url_for('static',filename='ao.jpg') }}" alt="{{ item }}" height="200" width=auto>
+            </a>
+        {% elif item == "Costco Iceland" %}
+            <a href="/til/{{item}}" class="mynd">
+            <img src="{{ url_for('static',filename='costco.png') }}" alt="{{ item }}" height="200" width=auto>
+            </a>
+        {% elif item == "Dælan" %}
+            <a href="/til/{{item}}" class="mynd">
+            <img src="{{ url_for('static',filename='daelan.png') }}" alt="{{ item }}" height="200" width=auto>
+            </a>
+        {% elif item == "N1" %}
+            <a href="/til/{{item}}" class="mynd">
+            <img src="{{ url_for('static',filename='n1.png') }}" alt="{{ item }}" height="200" width=auto>
+            </a>
+        {% elif item == "Olís" %}
+            <a href="/til/{{item}}" class="mynd">
+            <img src="{{ url_for('static',filename='olis.jpg') }}" alt="{{ item }}" height="200" width=auto>
+            </a>
+        {% elif item == "ÓB" %}
+            <a href="/til/{{item}}" class="mynd">
+            <img src="{{ url_for('static',filename='ob.jpg') }}" alt="{{ item }}" height="200" width=auto>
+            </a>
+        {% elif item == "Orkan" %}
+            <a href="/til/{{item}}" class="mynd">
+            <img src="{{ url_for('static',filename='orkan.jpg') }}" alt="{{ item }}" height="200" width=auto>
+            </a>
+        {% elif item == "Orkan X" %}
+            <a href="/til/{{item}}" class="mynd">
+            <img src="{{ url_for('static',filename='orkanx.png') }}" alt="{{ item }}" height="200" width=auto>
+            </a>
+        {% else %}
+            <a href="/til/{{item}}" class="mynd">{{ item }}</a>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

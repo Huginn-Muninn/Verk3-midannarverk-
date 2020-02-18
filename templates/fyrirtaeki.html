@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block innihald %}
+    <h2>{{ft}}</h2>
+    {% for item in data['results'] %}
+        {% if item["company"] == ft %}
+            <a href="/til/{{ft}}/{{item['name']}}">{{item["name"]}}</a><br>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
